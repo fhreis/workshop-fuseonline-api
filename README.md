@@ -32,10 +32,47 @@ Clique em 'Create Project' e crie um projeto para o seu banco de dados conforme 
 Clique no projeto criado (no nosso caso order-db) e do lado esquerdo acima mude para 'DEVELOPER':
 
 ![](fuseonline/06.png)
-`
+
 Ainda do lado esquerdo da tela clique em 'Add' e logo em seguida clique em 'Database'.
 
 ![](fuseonline/07.png)
+
+Selecione a opção 'PostgreSQL (Ephemeral)'
+
+![](fuseonline/07.png)
+
+Clique em 'Instantiate Template'
+
+![](fuseonline/07.png)
+
+Informe 'Conection Username' e 'Conection Password' (guarde estas informações pois elas serão necessárias para se conectar ao banco de dados).
+
+![](fuseonline/12.png)
+
+Clique em 'Topology' e acompanhe o processo de deploy que estará finalizado quando o pod tiver o círculo azul escuro conforme a imagem abaixo:
+
+![](fuseonline/13.png)
+
+### Criando a tabela no banco de dados
+
+Após finalizar o processo de deploy do banco de dados, volte para a view de 'Administrador'.
+
+![](fuseonline/14.png)
+
+Selecione a opção 'Workloads' e logo abaixo 'Pods'. 
+Verifique em 'Status' se o pod do banco de dados está em 'Running' para se certificar que não tivemos nenhum problema até aqui.
+
+![](fuseonline/15.png)
+
+Clique no pod do banco de dados na coluna 'Name' e logo em seguida selecione a aba 'Terminal'.
+
+![](fuseonline/16.png)
+
+Utilize o comando abaixo no terminal do seu pod para se conectar ao banco de dados informando o username e a senha do banco de dados.
+
+```bash
+psql -h postgresql sampledb username
+```
 
 
 
