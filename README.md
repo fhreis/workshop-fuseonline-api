@@ -85,7 +85,7 @@ Agora que a tabela foi criada, iremos verificar qual o endereço de conexão ao 
 ![](fuseonline/18.png)
 
 
-### Criando uma API no Fuse Online
+### Criando uma Conexão com um banco de dados no Fuse Online
 
 Após logar no seu ambiente do Fuse Online, do lado esquerdo clique em **Conections** e logo depois clique em **Create Conection** do lado direito acima.
 
@@ -95,9 +95,35 @@ Todos os conectores do Fuse Online serão listados, selecione a opção **Databa
 
 ![](fuseonline/20.png)
 
-Informe a URL de conexão ao banco, bem como o usuário e senha conforme a seguir. Lembre-se que o IP e porta deverá ser o mesmo que aparece em **Location** quando selecionamos **Networking** e **Services** 3 passos anteriores. Após preencher os dados clique em **Validate** para verificar se a conexão está correta e depois em **Next**.
+Informe a URL de conexão com o banco, bem como o usuário e senha conforme a seguir. Lembre-se que o IP e porta deverão ser os mesmos que aparecem em **Location** quando selecionamos **Networking** e **Services** conforme destacamos 3 passos anteriores. Após preencher os dados clique em **Validate** para verificar se a conexão está correta e depois em **Next**.
 
-![](fuseonline/20.png)
+![](fuseonline/21.png)
+
+Clique em **Save** para salvar a conexão criada. 
+
+![](fuseonline/22.png)
+
+### Criando uma API Rest no Fuse Online
+
+Agora iremos criar a nossa API Rest que possibilitará inserir novas transações no banco de dados **(POST)** ou obter a lista de transações do nosso banco **(GET)**.
+
+No lado esquerdo acima clique em **Integrations** e logo depois em **Create Integration** na parte central:
+
+![](fuseonline/23.png)
+
+Logo depois selecione a opção **API Provider**.
+
+![](fuseonline/24.png)
+
+Selecione a opção de **Create a new OpenAPI 2.x document** 
+
+![](fuseonline/25.png)
+
+
+
+
+
+
 
 
 
