@@ -15,49 +15,20 @@ Para completar esta atividade é necessário instalar e configurar o Fuse Online
 
 Realize o login no Openshift selecionando o identity provider 'testing-idp'
 
-![](imgs/01.png)
+![](fuseonline/01.png)
 
-And then copy to clipboard your login command
+Informe seu usuário e senha:
 
-![](imgs/08.png)
+![](fuseonline/02.png)
 
-Now, let's create a new database in a project named `fuse-demo`:
+Clique em 'Create Project' e crie um projeto para o seu banco de dados conforme os dados a seguir:
 
-```bash
-# Create new project on Openshift
-oc new-project fuse-demo
+![](fuseonline/04.png)
 
-# Create a new postgresql database using a Openshift template
-oc new-app --template=postgresql-persistent --param=POSTGRESQL_PASSWORD=redhat --param=POSTGRESQL_USER=redhat --param=POSTGRESQL_DATABASE=sampledb -n fuse-demo
-```
+Clique no projeto que foi criado e do lado esquerdo acima mude para 'DEVELOPER':
 
-When the pod is ready, run:
-
-```bash
-# Get postgresql pod name
-POD_POSTGRESQL=$(oc get po | grep postgresql | awk '{print $1}')
-
-# Create database
-oc exec -it $POD_POSTGRESQL -- bash -c 'psql -U redhat -d sampledb -c "CREATE TABLE users(id serial PRIMARY KEY,name VARCHAR (50),phone VARCHAR (50),age integer);"'
-
-# Populate the database
-oc exec -it $POD_POSTGRESQL -- bash -c "psql -U redhat -d sampledb -c \"INSERT INTO users(name, phone, age) VALUES  ('Rodrigo Ramalho', '(11) 95474-8099', 30);\""
-oc exec -it $POD_POSTGRESQL -- bash -c "psql -U redhat -d sampledb -c \"INSERT INTO users(name, phone, age) VALUES  ('Thiago Araki', '(11) 95474-8099', 31);\""
-oc exec -it $POD_POSTGRESQL -- bash -c "psql -U redhat -d sampledb -c \"INSERT INTO users(name, phone, age) VALUES  ('Gustavo Luszczynski', '(11) 95474-8099', 29);\""
-oc exec -it $POD_POSTGRESQL -- bash -c "psql -U redhat -d sampledb -c \"INSERT INTO users(name, phone, age) VALUES  ('Rafael Tuelho', '(11) 95474-8099', 55);\""
-oc exec -it $POD_POSTGRESQL -- bash -c "psql -U redhat -d sampledb -c \"INSERT INTO users(name, phone, age) VALUES  ('Elvis is not dead', '(11) 95474-8099', 36);\""
-
-# Make sure your data is saved
-oc exec -it $POD_POSTGRESQL -- bash -c "psql -U redhat -d sampledb -c \"select * from users;\""
-```
-
-> If for some reason you need to reinstall the database, just run:
-
-```bash
-oc delete all -l app=postgresql-persistent -n fuse-demo
-oc delete pvc postgresql -n fuse-demo
-oc delete secret postgresql -n fuse-demo
-```
+![](fuseonline/06.png)
+`
 
 ### Creating a Database Connection on Fuse Online
 
