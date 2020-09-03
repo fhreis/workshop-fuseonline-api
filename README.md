@@ -151,6 +151,37 @@ Clique novamente no path que foi definido anteriormente **customer_order** para 
 
 ![](fuseonline/30.png)
 
+Preencha as informação de **Summary, Description e Operation Id**.
+
+![](fuseonline/31.png)
+
+Mais abaixo ainda na operação **POST** clique em **Add a request body** e especifique o Data Type que definimos anteriormente, no nosso caso **customer_transaction**. Este serão os dados recebidos pela API. 
+
+![](fuseonline/32.png)
+
+Logo em seguida defina o **Response Type** como o retorno **201 - Created** e logo após selecione **customer_transaction** e também preencha uma **Description** para o retorno da consulta.
+
+![](fuseonline/33.png)
+
+Agora iremos definir a operação **GET** que possibilitará a consulta de todos as transações gravadas no banco de dados.
+
+![](fuseonline/34.png)
+
+Preencha as informações do **Summary, Description e Operation ID**
+
+![](fuseonline/35.png)
+
+A seguir em **Responses** selecione a opção **200 OK** definindo como **Type** array of customer_transaction (a nossa API retornará um array com todas as transações gravadas no banco). Clique em **Save**.
+
+![](fuseonline/36.png)
+
+Verifique se não tem nenhum erro em sua API e clique em **Next**.
+
+![](fuseonline/37.png)
+
+Veja que agora temos uma API com duas operações definidas **POST / GET**
+
+![](fuseonline/38.png)
 
 
 
