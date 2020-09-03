@@ -179,9 +179,33 @@ Verifique se não tem nenhum erro em sua API e clique em **Next**.
 
 ![](fuseonline/37.png)
 
-Veja que agora temos uma API com duas operações definidas **POST / GET**
+Veja que agora temos uma API com duas operações definidas **POST / GET** -- Na operação **GET** clique em **Create Flow**
 
 ![](fuseonline/38.png)
+
+Clique no sinal de **+** no centro da tela para adicionar mais um passo a nossa API que será a conexão com o banco de dados.
+
+![](fuseonline/39.png)
+
+Selecione a conexão com o banco de dados que criamos anteriormente, no nosso caso será a opção **Database Customer_Order** 
+
+![](fuseonline/40.png)
+
+Logo em seguida seleciona e opção **Invoke SQL**
+
+![](fuseonline/41.png)
+
+Em seguida especifique **SELECT * FROM customer_order** e clique em **Next**. Esta operação **GET** irá trazer os registros de transações do banco de dados. 
+
+![](fuseonline/42.png)
+
+
+
+
+
+
+
+
 
 
 
