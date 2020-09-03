@@ -4,12 +4,16 @@ Demonstração de como criar uma API no Fuse Online para inserir e obter registr
 
 > Nehum código é necessário para este workshop.
 
-
 ## Pre-requisitos
 
 ### Integrately Environment
 
 Para completar esta atividade é necessário instalar e configurar o Fuse Online no Openshift.
+
+### Requisitos de Negócio
+
+Nesta atividade a intenção é simular o desenvolvimento de uma API que irá receber transações dos pedidos efetuados pelos consumidores de uma empresa. 
+Após receber estas transações a integração irá gravar na tabela de banco de dados ou irá enviar esta transação para outro sistema através de mensageria.
 
 ### Criando um banco de dados no Openshift
 
@@ -25,10 +29,20 @@ Clique em 'Create Project' e crie um projeto para o seu banco de dados conforme 
 
 ![](fuseonline/04.png)
 
-Clique no projeto que foi criado e do lado esquerdo acima mude para 'DEVELOPER':
+Clique no projeto criado (no nosso caso order-db) e do lado esquerdo acima mude para 'DEVELOPER':
 
 ![](fuseonline/06.png)
 `
+Ainda do lado esquerdo da tela clique em 'Add' e logo em seguida clique em 'Database'.
+
+![](fuseonline/07.png)
+
+
+
+
+
+
+
 
 ### Creating a Database Connection on Fuse Online
 
