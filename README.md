@@ -103,7 +103,7 @@ Clique em **Save** para salvar a conexão criada.
 
 ![](fuseonline/22.png)
 
-### Criando uma API Rest no Fuse Online
+### Criando uma API Rest no Fuse Online utilizando API First Approach
 
 Agora iremos criar a nossa API Rest que possibilitará inserir novas transações no banco de dados **(POST)** ou obter a lista de transações do nosso banco **(GET)**.
 
@@ -118,6 +118,41 @@ Logo depois selecione a opção **API Provider**.
 Selecione a opção de **Create a new OpenAPI 2.x document** 
 
 ![](fuseonline/25.png)
+
+Mude algumas informações da API como **Title, Description**
+
+![](fuseonline/26.png)
+
+Logo após cliquem em Add Path do lado esquerdo e defina o **path /customer_order** e clique em **Add**
+
+![](fuseonline/27.png)
+
+Depois clique em **Add a data type** do lado esquerdo acima.
+
+![](fuseonline/28.png)
+
+Agora preencha os campos **Name, Description** e em seguida no campo **Enter JSON Example** informe o exemplo abaixo.
+
+```json
+{
+  "transaction_id": "131314",
+  "status": "completed",
+  "system": "db"
+}
+```
+
+**O JSON acima contem os que serão enviados pelos clientes de nossa API.**
+
+![](fuseonline/29.png)
+
+Obs: Não esqueça de salvar as suas alterações ao final.
+
+Clique novamente no path que foi definido anteriormente **customer_order** para que possamos adicionar operações. Na parte central, selecione **POST** e clique em **Add Operation**
+
+![](fuseonline/30.png)
+
+
+
 
 
 
