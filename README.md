@@ -4,7 +4,7 @@ Demonstração de como criar uma API no Fuse Online para inserir e obter registr
 
 > Nehum código é necessário para este workshop.
 
-## Pre-requisitos
+## Pré-requisitos
 
 ### Red Hat Integrately Environment
 
@@ -195,7 +195,7 @@ Logo em seguida seleciona e opção **Invoke SQL**
 
 ![](fuseonline/41.png)
 
-Em seguida especifique **SELECT * FROM customer_order** e clique em **Next**. Esta operação **GET** irá trazer os registros de transações do banco de dados. 
+Especifique **SELECT * FROM customer_order** e clique em **Next**. Esta operação **GET** irá trazer os registros de transações do banco de dados. 
 
 ![](fuseonline/42.png)
 
