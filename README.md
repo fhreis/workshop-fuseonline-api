@@ -29,7 +29,7 @@ Clique em 'Create Project' e crie um projeto para o seu banco de dados conforme 
 
 ![](fuseonline/04.png)
 
-Clique no projeto criado (no nosso caso order-db) e do lado esquerdo acima mude para 'DEVELOPER':
+Clique no projeto criado (no nosso caso order-db) e do lado esquerdo acima mude para **DEVELOPER**:
 
 ![](fuseonline/06.png)
 
