@@ -10,18 +10,12 @@ Demonstração de como criar uma API no Fuse Online para inserir e obter registr
 
 Para completar esta atividade é necessário instalar e configurar o Fuse Online no Openshift.
 
-## Sumary
-
-0. Requisitos de Negócio (#testdrive-step-0)
-1. Criando um banco de dados no Openshift (#testdrive-step-1)
-2. Criando uma Conexão com um banco de dados no Fuse Online (#testdrive-step-2)
-
-### Requisitos de Negócio <a name="testdrive-step-0"></a>
+### Requisitos de Negócio 
 
 Nesta atividade a intenção é simular o desenvolvimento de uma API que irá receber transações dos pedidos efetuados pelos consumidores de uma empresa. 
 Após receber estas transações a integração irá gravar na tabela de banco de dados ou irá enviar esta transação para outro sistema através de mensageria.
 
-### Criando um banco de dados no Openshift <a name="testdrive-step-1"></a>
+### Criando um banco de dados no Openshift 
 
 Realize o login no Openshift selecionando o identity provider **testing-idp**
 
@@ -91,7 +85,7 @@ Agora que a tabela foi criada, iremos verificar qual o endereço de conexão ao 
 ![](fuseonline/18.png)
 
 
-### Criando uma Conexão com um banco de dados no Fuse Online <a name="testdrive-step-2"></a>
+### Criando uma Conexão com um banco de dados no Fuse Online 
 
 Após logar no seu ambiente do Fuse Online, do lado esquerdo clique em **Conections** e logo depois clique em **Create Conection** do lado direito acima.
 
@@ -109,7 +103,7 @@ Clique em **Save** para salvar a conexão criada.
 
 ![](fuseonline/22.png)
 
-### Criando uma API Rest no Fuse Online utilizando API First Approach <a name="testdrive-step-3"></a>
+### Criando uma API Rest no Fuse Online utilizando API First Approach 
 
 Agora iremos criar a nossa API Rest que possibilitará inserir novas transações no banco de dados **(POST)** ou obter a lista de transações do nosso banco **(GET)**.
 
