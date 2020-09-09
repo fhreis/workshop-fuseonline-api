@@ -10,12 +10,24 @@ Demonstração de como criar uma API no Fuse Online para inserir e obter registr
 
 Para completar esta atividade é necessário instalar e configurar o Fuse Online no Openshift.
 
+## Laboratórios:
+
+0. [Criando um banco de dados no Openshift](#testdrive-step-0)
+1. [Configure Maven](#testdrive-step-1)
+2. [Create your first Fuse Project and explore Red Hat Developer Studio](#testdrive-step-2)
+3. [Simple File Manipulation](#testdrive-step-3)
+4. [Simple Custom Bean](#testdrive-step-4)
+5. [Simple Unmarshal/Marshal](#testdrive-step-5)
+6. [SoapToRest](https://developers.redhat.com/blog/2018/07/24/migrate-soap-to-rest-with-camel/)
+7. [API First](https://developers.redhat.com/blog/2018/07/12/contract-first-api-design-with-apicurio-and-red-hat-fuse/)
+
+
 ### Requisitos de Negócio 
 
 Nesta atividade a intenção é simular o desenvolvimento de uma API que irá receber transações dos pedidos efetuados pelos consumidores de uma empresa. 
 Após receber estas transações a integração irá gravar na tabela de banco de dados ou irá enviar esta transação para outro sistema através de mensageria.
 
-### Criando um banco de dados no Openshift 
+### Criando um banco de dados no Openshift <a name="testdrive-step-0"></a>
 
 Realize o login no Openshift selecionando o identity provider **testing-idp**
 
