@@ -207,7 +207,13 @@ Logo em seguida seleciona e opção **Invoke SQL**
 
 ![](fuseonline/41.png)
 
-Especifique **SELECT * FROM customer_order** e clique em **Next**. Esta operação **GET** irá trazer os registros de transações do banco de dados. 
+Especifique a query abaixo e clique em **Next**. 
+
+```sql
+SELECT * FROM customer_order
+``` 
+
+Esta operação **GET** irá trazer os registros de transações do banco de dados. 
 
 ![](fuseonline/42.png)
 
@@ -235,8 +241,15 @@ Clique em **Invoke SQL**
 
 ![](fuseonline/48.png)
 
-Especique a query **INSERT INTO CUSTOMER_ORDER (transaction_id, status, system) values (:#transaction_id, :#status, :#system)** e clique em **Next**
-Veja que os campos que serão preenchidos pelos valores recebidos na API se inicial com **:#**
+Especique a query abaixo  e clique em **Next**.
+
+```sql
+INSERT INTO CUSTOMER_ORDER (transaction_id, status, system) values (:#transaction_id, :#status, :#system)
+``` 
+
+Veja que os campos que serão preenchidos pelos valores recebidos na API se iniciam com **:#**
+
+
 
 ![](fuseonline/49.png)
 
