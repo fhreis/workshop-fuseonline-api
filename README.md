@@ -13,13 +13,11 @@ Para completar esta atividade é necessário instalar e configurar o Fuse Online
 ## Laboratórios:
 
 0. [Criando um banco de dados no Openshift](#testdrive-step-0)
-1. [Configure Maven](#testdrive-step-1)
-2. [Create your first Fuse Project and explore Red Hat Developer Studio](#testdrive-step-2)
-3. [Simple File Manipulation](#testdrive-step-3)
-4. [Simple Custom Bean](#testdrive-step-4)
-5. [Simple Unmarshal/Marshal](#testdrive-step-5)
-6. [SoapToRest](https://developers.redhat.com/blog/2018/07/24/migrate-soap-to-rest-with-camel/)
-7. [API First](https://developers.redhat.com/blog/2018/07/12/contract-first-api-design-with-apicurio-and-red-hat-fuse/)
+1. [Criando a tabela no banco de dados](#testdrive-step-1)
+2. [Criando uma Conexão com um banco de dados no Fuse Online ](#testdrive-step-2)
+3. [Criando uma API Rest no Fuse Online utilizando API First Approach](#testdrive-step-3)
+4. [SoapToRest](https://developers.redhat.com/blog/2018/07/24/migrate-soap-to-rest-with-camel/)
+5. [API First](https://developers.redhat.com/blog/2018/07/12/contract-first-api-design-with-apicurio-and-red-hat-fuse/)
 
 
 ### Requisitos de Negócio 
@@ -65,7 +63,7 @@ Clique em **Topology** e acompanhe o processo de deploy que estará finalizado q
 
 ![](fuseonline/13.png)
 
-### Criando a tabela no banco de dados
+### Criando a tabela no banco de dados  <a name="testdrive-step-1"></a>
 
 Após finalizar o processo de deploy do banco de dados, volte para a view de **Administrator**.
 
@@ -97,7 +95,7 @@ Agora que a tabela foi criada, iremos verificar qual o endereço de conexão ao 
 ![](fuseonline/18.png)
 
 
-### Criando uma Conexão com um banco de dados no Fuse Online 
+### Criando uma Conexão com um banco de dados no Fuse Online <a name="testdrive-step-2"></a>
 
 Após logar no seu ambiente do Fuse Online, do lado esquerdo clique em **Conections** e logo depois clique em **Create Conection** do lado direito acima.
 
@@ -115,7 +113,7 @@ Clique em **Save** para salvar a conexão criada.
 
 ![](fuseonline/22.png)
 
-### Criando uma API Rest no Fuse Online utilizando API First Approach 
+### Criando uma API Rest no Fuse Online utilizando API First Approach <a name="testdrive-step-3"></a>
 
 Agora iremos criar a nossa API Rest que possibilitará inserir novas transações no banco de dados **(POST)** ou obter a lista de transações do nosso banco **(GET)**.
 
