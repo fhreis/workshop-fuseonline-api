@@ -6,8 +6,7 @@ Demonstração de como criar uma API no Fuse Online para inserir e obter registr
 
 ## Pré-requisitos
 
-Red Hat Fuse Online 1.10 
-Openshift 4.x
+
 
 ### Red Hat Integrately Environment
 
