@@ -8,7 +8,7 @@ Demonstração de como criar uma API no Fuse Online para inserir e obter registr
 
 ### Red Hat Integrately Environment
 
-Para completar esta atividade é necessário instalar e configurar o Fuse Online no Openshift.
+Para completar esta atividade é necessário instalar e configurar o Fuse Online no Openshift. Veja: [INSTALLING AND OPERATING FUSE ONLINE ON OPENSHIFT CONTAINER PLATFORM](https://access.redhat.com/documentation/en-us/red_hat_fuse/7.7/html/installing_and_operating_fuse_online_on_openshift_container_platform/index)
 
 ## Laboratórios:
 
