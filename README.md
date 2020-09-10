@@ -305,7 +305,7 @@ Clique na aba **Activity** para mais detalhes
 
 ### Utilizando Conditional Flows <a name="testdrive-step-4"></a>
 
-Agora iremos utilizar [Simple Expression Language](https://camel.apache.org/components/latest/languages/simple-language.html) em conjunto com um **Conditional Flow** para inserir todas as mensagens que no campo **system** possuem **db** Já quando a mensagem possuir **others** no campo **system** a mesma será encaminhada para um tópico **kafka**.
+Agora iremos utilizar [Simple Expression Language](https://camel.apache.org/components/latest/languages/simple-language.html) em conjunto com um **Conditional Flow** para inserir todas as mensagens que no campo **system** possuem **db** Já quando a mensagem possuir **others** no campo **system** a mesma será encaminhada para um tópico **Kafka**.
 
 **Obs**: Antes de iniciar esta atividade, crie um cluster kafka com o Openshift Operators e logo em seguida crie uma conexão no Fuse Online para o cluster Kafka.
 
@@ -317,7 +317,7 @@ Na transação **POST** clique em **Edit flow**
 
 ![](fuseonline/75.png)
 
-Em seguida, exclua todos os **"steps"** da operação **POST** deixando confirme a imagem abaixo:
+Em seguida, exclua todos os **"steps"** da operação **POST** deixando conforme a imagem abaixo:
 
 ![](fuseonline/77.png)
 
@@ -329,7 +329,7 @@ Em seguida escolha a opção **Advanced expression builder**
 
 ![](fuseonline/79.png)
 
-No campo **When** specifique a **simple expression** abaixo
+No campo **When** specifique a **simple expression** abaixo e marque a opção **Execute default flow**
 
 ```bash
 ${body.body.system} contains 'db'
@@ -342,6 +342,90 @@ Especifique o tipo de dado selecionando **JSON Instance** e clique em **Next**
 
 ![](fuseonline/81.png)
 
+Agora teremos a opção de definir dois fluxos sendo eles **When** que será executado quando a variável **system** for **db** e o fluxo **Otherwise** que será executado caso a condição não seja atendida.
+
+![](fuseonline/82.png)
+
+Clique em **Open flow** no primeiro fluxo **(When)** e logo em seguida clique no sinal de **+**.
+
+![](fuseonline/83.png)
+
+Iremos selecionar a nossa conexão com o banco de dados **Database Customer Order**. Pois caso a variável **sytem** tenha seu valor como **db** e mensagem deverá ser gravada no banco de dados.
+
+![](fuseonline/84.png)
+
+Clique em Invoke SQL
+
+![](fuseonline/85.png)
+
+Especique a query abaixo e clique em Next.
+
+```sql
+INSERT INTO CUSTOMER_ORDER (transaction_id, status, system) values (:#transaction_id, :#status, :#system)
+``` 
+![](fuseonline/86.png)
+
+Logo em seguida realize o mapeamento dos dados de entrada e execução da query conforme a seguir:
+
+![](fuseonline/87.png)
+
+![](fuseonline/88.png)
+
+Em seguida clique em **Go to operation flow** para voltarmos ao fluxo principal.
+
+![](fuseonline/89.png)
+
+Agora iremos definir o fluxo **Otherwise** que será executado caso a variável **system** possua um valor diferente de **db**. Esta mensagem será encaminhada para um tópico kafka, e neste tópico outros sistemas poderão receber esta transação.
+
+Clique em **Open flow**
+
+![](fuseonline/90.png)
+
+Logo em seguida clique em **+**
+
+![](fuseonline/91.png)
+
+Agora selecione a opção **Kafka Message Broker**. Lembrando que esta conexão foi definida previamente e consta como pré requisito desta atividade.
+
+![](fuseonline/92.png)
+
+Em seguida selecione o tópico Kafka que receberá esta mensagem
+
+![](fuseonline/96.png)
+
+Especifique o tipo de dado selecionando **JSON Instance** e clique em Next
+
+
+```json
+{
+  "transaction_id": "131314",
+  "status": "completed",
+  "system": "others"
+}
+``` 
+
+![](fuseonline/97.png)
+
+Realize em seguida o mapeamento dos dados
+
+![](fuseonline/98.png)
+
+![](fuseonline/99.png)
+
+Em seguida verifique se não existe nenhum erro e clique em **Go to operation flow**
+
+![](fuseonline/101.png)
+
+Pronto, agora é só clicar em **Publish** para publicar sua Integração
+
+![](fuseonline/102.png)
+
+Define um nome e selecione novamente **Save and Publish**
+
+![](fuseonline/103.png)
+
+
+Após publicar sua API, realize testes utilizando o **curl** ou outras ferramentas como o **postman**. Verifique nas métricas de sua rota se os fluxos estão sendo executados corretamente conforme o valor de **system**.
 
 
 
