@@ -18,6 +18,7 @@ Para completar esta atividade é necessário instalar e configurar o Fuse Online
 1. [Criando a tabela no banco de dados](#testdrive-step-1)
 2. [Criando uma Conexão com um banco de dados no Fuse Online ](#testdrive-step-2)
 3. [Criando uma API Rest no Fuse Online utilizando API First Approach](#testdrive-step-3)
+4. [Utilizando Conditional Flows](#testdrive-step-4)
 4. [SoapToRest](https://developers.redhat.com/blog/2018/07/24/migrate-soap-to-rest-with-camel/)
 5. [API First](https://developers.redhat.com/blog/2018/07/12/contract-first-api-design-with-apicurio-and-red-hat-fuse/)
 
@@ -302,7 +303,7 @@ Clique na aba **Activity** para mais detalhes
 ![](fuseonline/61.png)
 
 
-### Conditional Flows <a name="testdrive-step-"></a>
+### Utilizando Conditional Flows <a name="testdrive-step-4"></a>
 
 Agora iremos utilizar [Simple Expression Language](https://camel.apache.org/components/latest/languages/simple-language.html) em conjunto com um **Conditional Flow** para inserir todas as mensagens que no campo **system** possuem **db** Já quando a mensagem possuir **others** no campo **system** a mesma será encaminhada para um tópico **kafka**.
 
