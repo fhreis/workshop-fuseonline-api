@@ -302,6 +302,48 @@ Clique na aba **Activity** para mais detalhes
 ![](fuseonline/61.png)
 
 
+### Conditional Flows <a name="testdrive-step-"></a>
+
+Agora iremos utilizar [Simple Expression Language](https://camel.apache.org/components/latest/languages/simple-language.html) em conjunto com um **Conditional Flow** para inserir todas as mensagens que no campo **system** possuem **db** Já quando a mensagem possuir **others** no campo **system** a mesma será encaminhada para um tópico **kafka**.
+
+**Obs**: Antes de iniciar esta atividade, crie um cluster kafka com o Openshift Operators e logo em seguida crie uma conexão no Fuse Online para o cluster Kafka.
+
+Do lado esquerdo clique em **Integrations**, localize a API que criamos anteriormente e clique em **Edit**
+
+![](fuseonline/74.png)
+
+Na transação **POST** clique em **Edit flow**
+
+![](fuseonline/75.png)
+
+Em seguida, exclua todos os **"steps"** da operação **POST** deixando confirme a imagem abaixo:
+
+![](fuseonline/77.png)
+
+Clique no sinal de **+** e selecione **Conditional Flows**
+
+![](fuseonline/78.png)
+
+Em seguida escolha a opção **Advanced expression builder**
+
+![](fuseonline/79.png)
+
+No campo **When** specifique a **simple expression** abaixo
+
+```bash
+${body.body.system} contains 'db'
+``` 
+**Obs:** Veja que nesta **Simple Expression** estamos utilizando duas vezes o body. Isto se deve ao fato do Fuse Online adicionar uma propriedade body quando algumas integrações iniciam com **API Provider, Webhook ou Custom REST API connection**
+
+![](fuseonline/80.png)
+
+Especifique o tipo de dado selecionando **JSON Instance** e clique em **Next**
+
+![](fuseonline/81.png)
+
+
+
+
 
 
 
